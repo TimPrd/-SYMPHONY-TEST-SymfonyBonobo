@@ -1,41 +1,56 @@
-# OCPlatform
-Code source de la plateforme d'annonce construite grâce au [MOOC OpenClassrooms](https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-symfony2).
-### [Ce cours Symfony est également disponible en livre](http://www.eyrolles.com/Informatique/Livre/developpez-votre-site-web-avec-le-framework-symfony2-9791090085428) [et en ebook](https://openclassrooms.com/ebooks/developpez-votre-site-web-avec-le-framework-symfony2)
+# Social Bonobo
+Ce projet permet de se créer un compte, de gérer les sessions, les amis etc.
+Il utilise FOSuserbundle pour la géstion des utilisateurs.
 
 # Installation
-## 1. Récupérer le code
-Vous avez deux solutions pour le faire :
+## 1. Récupération du code
+-> Par clonage du dépot
+ou
+-> En téléchargeant l'archive .ZIP
 
-1. Via Git, en clonant ce dépôt ;
-2. Via le téléchargement du code source en une archive ZIP, à cette adresse : https://github.com/winzou/mooc-symfony/archive/master.zip
 
-*Attention, le code est divisé en plusieurs branches `iteration-XX`. Sur la branche `master` vous n'avez que le tout début du cours, n'hésitez pas à [changer de branche](https://github.com/winzou/mooc-symfony/branches) !*
+## 2. Installer les vendors
+#Utiliser composer :
 
-## 2. Définir vos paramètres d'application
-Pour ne pas qu'on se partage tous nos mots de passe, le fichier `app/config/parameters.yml` est ignoré dans ce dépôt. A la place, vous avez le fichier `parameters.yml.dist` que vous devez renommer (enlevez le `.dist`) et modifier.
+'Le mettre à jour'
+**Unix** :
+```
+php composer.phar update
+```
+**Windows** :  
+```
+composer update
+```
 
-## 3. Télécharger les vendors
-Avec Composer bien évidemment :
-
+--------------------------
+'Installer'
+**Unix** :
+```shell
     php composer.phar install
+```
+**Windows** :  
+```
+    composer install
+ ```
+    (voir https://getcomposer.org/download/)
 
-## 4. Créez la base de données
-Si la base de données que vous avez renseignée dans l'étape 2 n'existe pas déjà, créez-la :
-
+## 3. La base de données
+```
     php bin/console doctrine:database:create
-
-Puis créez les tables correspondantes au schéma Doctrine :
-
+```
+Puis créez les tables:
+```
     php bin/console doctrine:schema:update --dump-sql
     php bin/console doctrine:schema:update --force
+```
 
-Enfin, éventuellement, ajoutez les fixtures :
-
-    php bin/console doctrine:fixtures:load
-
-## 5. Publiez les assets
-Publiez les assets dans le répertoire web :
-
+## 4. Assets
+```
     php bin/console assets:install web
+```
 
-## Et profitez !
+## 5. Images
+![alt tag](https://github.com/TimPrd/SymfonyBonobo//blob/master/Posts.png)
+<p align="center"> Haut de l'écran </p>
+![alt tag](https://github.com/TimPrd/SymfonyBonobo//blob/master/Modification.png)
+<p align="center"> Accueil </p>
