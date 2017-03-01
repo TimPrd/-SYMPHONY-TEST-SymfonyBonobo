@@ -1,0 +1,50 @@
+{# On utilise ici le layout général, qui se situe dans ce même CoreBundle maintenant #}
+{% extends "OCCoreBundle::layout.html.twig" %}
+
+{% block title %}
+  Page d'accueil - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+  <h2>Vos informations : </h2>
+  {#Si connecté on affiche les infos#}
+  {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+    <table class="table table-striped">
+      <tbody>
+      <tr>
+        <td>  Username </td>
+        <td>{{ app.user.username }}</td>
+      </tr>
+      <tr>
+        <td>  Votre race</td>
+        <td>{{ app.user.race }}</td>
+      </tr>
+      <tr>
+        <td>  Votre age </td>
+        <td>{{ app.user.age }}</td>
+      </tr>
+      <tr>
+        <td>  Votre nourriture </td>
+        <td>{{ app.user.nourriture }}</td>
+      </tr>
+
+      </tbody>
+    </table>
+
+  {% else %}
+        <p>Ce site vous permet de gérer votre profil ! <br>
+          Rejoingnez-nous ! </p>
+        <li ><a href="{{ path('fos_user_security_login') }}">Connexion<span style="font-size:16px;" class=" glyphicon glyphicon-user"></span></a></li>
+        <li ><a href="{{ path('fos_user_registration_register') }}">Inscription<span style="font-size:16px;" class="glyphicon glyphicon-log-in"></span></a></li>
+
+  {% endif %}
+
+    {# en cours (recherche tout les users)
+  <h1>Tout les bonobos : </h1>
+    {% for user in users %}
+      <li>{{ user.username }}</li>
+    {% endfor %} #}
+
+{% endblock %}
