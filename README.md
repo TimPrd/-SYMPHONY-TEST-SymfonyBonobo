@@ -43,7 +43,22 @@ composer update
     composer install
  ```
  (voir https://getcomposer.org/download/)
-
+ --------------------------
+ 
+ /!\ FOS\UserBundle\Form\Type\RegistrationFormType.php doit contenir dans le buildForm
+ 
+```php
+->add('race', TextType::class)
+->add('age', TextType::class)
+->add('nourriture', ChoiceType::class, array(
+    'choices'  => array(
+        'Bananes' => 'Bananes',
+        'Cacahuètes' => 'Cacahuètes',
+        'Pommes' => 'Pommes',
+        'Fleurs' => 'Fleurs',)
+        ))
+```
+ /!\
 ## 3. La base de données
 ```
     php bin/console doctrine:database:create
