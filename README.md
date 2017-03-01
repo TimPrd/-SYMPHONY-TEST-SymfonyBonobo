@@ -50,7 +50,7 @@ Puis créez les tables:
 ```
 
 ## 5. Images
-![alt tag](https://github.com/TimPrd/SymfonyBonobo//blob/master/Posts.png)
+![alt tag](https://github.com/TimPrd/SymfonyBonobo/master/haut.png)
 <p align="center"> Haut de l'écran </p>
-![alt tag](https://github.com/TimPrd/SymfonyBonobo//blob/master/Modification.png)
+![alt tag](https://github.com/TimPrd/SymfonyBonobo/master/inscription.png)
 <p align="center"> Accueil </p>
