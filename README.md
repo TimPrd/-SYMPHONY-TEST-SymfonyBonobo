@@ -16,7 +16,8 @@ Responsive design avec Bootstrap.
 ## 2. Installer les vendors
 Utiliser composer :
 
-    ''Le mettre à jour''
+####Le mettre à jour
+=====================
 
 
 **Unix** :
@@ -29,7 +30,8 @@ composer update
 ```
 
 --------------------------
-     ''Installer''
+####Installer
+=====================
 
 **Unix** :
 ```shell
@@ -61,4 +63,4 @@ Puis créez les tables:
 ![alt tag](https://github.com/TimPrd/SymfonyBonobo/blob/master/haut.png)
 <p align="center"> Haut de l'écran </p>
 ![alt tag](https://github.com/TimPrd/SymfonyBonobo/blob/master/inscription.png)
-<p align="center"> Accueil </p>
+<p align="center"> Inscription </p>
